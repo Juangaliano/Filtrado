@@ -1,10 +1,50 @@
+:root {
+  /* ##Colors */
+
+  /* ## Primary ## */
+
+  --desaturatedDarkCyan: hsl(180, 29%, 50%);
+
+  /* ## Neutral ## */
+
+  --lightGrayishCyanBackground: hsl(180, 52%, 96%);
+  --lightGrayishCyan: hsl(180, 31%, 95%);
+  --darkGrayishCyan: hsl(180, 8%, 52%);
+  --veryDarkGrayishCyan: hsl(180, 14%, 20%);
+}
+
 html {
-    box-sizing: border-box;
-  }
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 
 body {
+  margin: 0px;
+  padding: 0px;
+  font-size: 15px;
   font-family: "League Spartan", sans-serif;
+  background-color: var(--lightGrayishCyanBackground);
+}
+
+nav {
+  width: 100%;
+  height: 20vh;
+  background-image: url('../images/bg-header-desktop.svg');
+  background-color: var(--desaturatedDarkCyan);
+}
+
+main{
+    width: 80%;
+    padding:20px;
+    margin: 20px auto;
+    background-color: var(--darkGrayishCyan);
+}
+
+.card{
+    width: 100%;
+    background-color: var(--lightGrayishCyan);
 }
