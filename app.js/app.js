@@ -1,6 +1,6 @@
 //Variables
 const resultado = document.querySelector("#resultado");
-
+let newCard = document.querySelector(".newCard");
 
 fetch("data.json")
   .then((response) => response.json())
@@ -8,7 +8,6 @@ fetch("data.json")
     console.log(datos);
     let resultadoHTML = "";
     datos.forEach((dato) => {
-    
       //   id, company, logo, new, featured, position, role, level, postedAt, contract, location, languages, tools
       resultadoHTML += `
       <div class="card">
@@ -19,8 +18,8 @@ fetch("data.json")
         <div class="card-textos">
           <div class="primer-div">
             <p class="card-nombre">${dato.company}</p>
-            <p class="new">${dato.neew}</p>
-            <p>${dato.featured}</p>
+            ${dato.neew ? '<p class="newCard">NEW!</p>' : ""}
+            ${dato.featured ? '<p class="featured">FEATURED</p>' : ""}
           </div>
           <div>
             <p class="titulo">${dato.position}</p>
