@@ -11,6 +11,10 @@
   --lightGrayishCyan: hsl(180, 31%, 95%);
   --darkGrayishCyan: hsl(180, 8%, 52%);
   --veryDarkGrayishCyan: hsl(180, 14%, 20%);
+
+
+  /* ## Border ## */
+  --borderRadius: 10px;
 }
 
 html {
@@ -30,6 +34,11 @@ body {
   background-color: var(--lightGrayishCyanBackground);
 }
 
+.container {
+  width: 80%;
+  margin: 0px auto;
+}
+
 nav {
   width: 100%;
   height: 20vh;
@@ -40,7 +49,7 @@ nav {
 main {
   height: 100vh;
   width: 80%;
-  padding: 20px;
+  /* padding: 20px; */
   margin: 20px auto;
   /* background-color: var(--darkGrayishCyan); */
 }
@@ -49,8 +58,8 @@ main {
   width: 100%;
   background-color: var(--lightGrayishCyan);
   padding: 20px;
-  margin: 30px 10px;
-  border-radius: 10px;
+  margin: 30px 0px;
+  border-radius: var(--borderRadius);
   box-shadow: 5px 5px 15px rgba(91, 164, 164, 1);
 }
 .card-titulo {
@@ -82,6 +91,10 @@ main {
   font-weight: 900;
   font-size: 20px;
   margin: 0px;
+  cursor: pointer;
+}
+.titulo:hover {
+  color: var(--desaturatedDarkCyan);
 }
 
 .primer-div {
@@ -101,11 +114,11 @@ p {
 .featured {
   color: white;
   height: auto;
-  padding:8px;
+  padding: 8px;
   text-align: center;
   font-size: 12px;
   font-weight: 700;
-  display: block; 
+  display: block;
   border-radius: 40px;
 }
 
@@ -114,5 +127,12 @@ p {
 }
 
 .featured {
-  background-color: var( --veryDarkGrayishCyan);
+  background-color: var(--veryDarkGrayishCyan);
+}
+
+.search {
+  height: 80px;
+  margin-top: -40px;
+  background-color: var(--lightGrayishCyan);
+  border-radius: var(--borderRadius);
 }
